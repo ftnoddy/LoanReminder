@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(true);
@@ -37,6 +38,7 @@ const App = () => {
   }
 
   return (
+<Router>
     <div className="app">
       <button className="toggle-button" onClick={handleToggle}>
         {showLogin ? "Sign Up" : "Log In"}
@@ -44,6 +46,7 @@ const App = () => {
       <Navbar onNavigation={handleNavigation} />
       {content}
     </div>
+</Router>
   );
 };
 
