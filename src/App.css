@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
@@ -25,26 +25,30 @@ form {
 }
 
 label {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 input {
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: none;
   border-radius: 4px;
   background-color: #333333;
   color: #ffffff;
+  font-size: 16px;
 }
 
 button {
-  padding: 10px 15px;
+  padding: 12px 20px;
   background-color: #007bff;
   border: none;
   border-radius: 4px;
   color: #ffffff;
   font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -56,19 +60,19 @@ button:hover {
   padding: 20px;
 }
 
-button.toggle-button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  color: #ffffff;
+.app-title {
+  font-size: 36px;
   font-weight: bold;
-  cursor: pointer;
+  margin-bottom: 30px;
 }
 
-button.toggle-button:hover {
-  background-color: #0056b3;
+.app-subtitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ccc;
 }
+
+
 
 /* Navbar.css */
 .navbar {
@@ -100,12 +104,13 @@ button.toggle-button:hover {
 .nav-link:hover {
   text-decoration: underline;
 }
+
 /*contact us*/
 .contact-container {
   max-width: 400px;
   margin: auto;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 40px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
