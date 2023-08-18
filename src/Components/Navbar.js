@@ -9,34 +9,29 @@ const Navbar = ({ onNavigation }) => {
   return (
     <nav>
       <ul>
-        <li>
+        <li className="home">
           <Link to="/" onClick={() => handleNavLinkClick("/")}>
             Home
           </Link>
         </li>
-        <li>
+        <li className="signup">
           <Link to="/signup" onClick={() => handleNavLinkClick("/signup")}>
             Sign Up
           </Link>
         </li>
-        <li>
+        <li className="login">
           <Link to="/login" onClick={() => handleNavLinkClick("/login")}>
             Login
           </Link>
         </li>
-        <li>
+        <li className="about">
           <Link to="/about" onClick={() => handleNavLinkClick("/about")}>
-           About
+            About
           </Link>
         </li>
-        <li>
+        <li className="contact">
           <Link to="/contact" onClick={() => handleNavLinkClick("/contact")}>
             Contact
-          </Link>
-        </li>
-        <li>
-          <Link to="/footer" onClick={() => handleNavLinkClick("/footer")}>
-            Footer
           </Link>
         </li>
       </ul>

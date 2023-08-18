@@ -3,7 +3,6 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import "./App.css";

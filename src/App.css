@@ -197,6 +197,27 @@ li {
   margin: 0 1rem;
 }
 
+/* Different hover colors based on class names */
+li.home:hover a {
+  color: #007bff;
+}
+
+li.signup:hover a {
+  color: #34c759;
+}
+
+li.login:hover a {
+  color: #ff2d55;
+}
+
+li.about:hover a {
+  color: #f39c12;
+}
+
+li.contact:hover a {
+  color: #5ac8fa;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -204,7 +225,56 @@ a {
   transition: color 0.3s;
 }
 
-a:hover {
-  color: #007bff; 
+
+/* Home.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.animated-text {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.animated-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: colorChange 4s infinite;
+}
+
+.animated-text p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: #ff2d55;
+  }
+  25% {
+    color: #007bff;
+  }
+  50% {
+    color: #5ac8fa;
+  }
+  75% {
+    color: #34c759;
+  }
+}
+
+.home-footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1e1e;
+  color: #ccc;
+  font-size: 14px;
 }
 
