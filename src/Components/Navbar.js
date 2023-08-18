@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ onNavigation }) => {
   const handleNavLinkClick = (path) => {
@@ -10,34 +10,34 @@ const Navbar = ({ onNavigation }) => {
     <nav>
       <ul>
         <li>
-          <NavLink to="/" onClick={() => handleNavLinkClick("/")}>
+          <Link to="/" onClick={() => handleNavLinkClick("/")}>
             Home
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="/signup" onClick={() => handleNavLinkClick("/signup")}>
+          <Link to="/signup" onClick={() => handleNavLinkClick("/signup")}>
             Sign Up
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="/login" onClick={() => handleNavLinkClick("/login")}>
+          <Link to="/login" onClick={() => handleNavLinkClick("/login")}>
             Login
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="/about" onClick={() => handleNavLinkClick("/about")}>
+          <Link to="/about" onClick={() => handleNavLinkClick("/about")}>
            About
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="/contact" onClick={() => handleNavLinkClick("/contact")}>
+          <Link to="/contact" onClick={() => handleNavLinkClick("/contact")}>
             Contact
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="/footer" onClick={() => handleNavLinkClick("/footer")}>
+          <Link to="/footer" onClick={() => handleNavLinkClick("/footer")}>
             Footer
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </nav>
