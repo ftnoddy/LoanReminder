@@ -278,3 +278,32 @@ a {
   font-size: 14px;
 }
 
+
+
+.loan-details-button {
+  background-color: #ff2d55;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: bounce 2s infinite;
+}
+
+.loan-details-button:hover {
+  background-color: #33d9b2;
+  color: #fff;
+  text-shadow: 0px 0px 8px #33d9b2;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
