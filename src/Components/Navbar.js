@@ -34,6 +34,11 @@ const Navbar = ({ onNavigation }) => {
             Contact
           </Link>
         </li>
+        <li className="dashboard-link">
+          <Link to="/dashboard" className="dashboard-button" onClick={() => handleNavLinkClick("/dashboard")}>
+            Dashboard
+          </Link>
+        </li>
       </ul>
     </nav>
   );

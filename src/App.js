@@ -7,6 +7,7 @@ import Contact from "./Components/Contact";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import LoanDetailsPage from "./Components/LoanDetailsPage";
+import Dashboard from "./Components/Dashboard";
 import "./App.css";
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/loan-details" element={<LoanDetailsPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
