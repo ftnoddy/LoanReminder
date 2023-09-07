@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const LoanDetailsPage = () => {
   const [loanAmount, setLoanAmount] = useState("");
@@ -39,6 +40,22 @@ const LoanDetailsPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const loanData = {
+      loanAmount,
+      loanTermYears,
+      loanTermMonths,
+      interestRate,
+      compoundFrequency,
+      repaymentFrequency,
+    };
+    axios
+    .post("http://localhost:3000/api/calculateLoan", loanData)
+    .then((response) => {
+      // Handle the response from the backend
+      const responseData = response.data;
+      // Do something with responseData, which contains the results from the backend
+      console.log(responseData);  
+
     const loanTermInMonths = loanTermYears * 12 + Number(loanTermMonths);
     const monthlyInterestRate = Number(interestRate) / 100 / 12;
 
@@ -58,19 +75,22 @@ const LoanDetailsPage = () => {
       loanAmount *
       (monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, exponent)));
 
-    setRepaymentAmount(calculatedRepaymentAmount.toFixed(2));
+      setRepaymentAmount(responseData.repaymentAmount);
 
     const totalRepayment = calculatedRepaymentAmount * repaymentPeriodInMonths;
     const totalInterest = totalRepayment - loanAmount;
 
-    setTotalPayments(repaymentPeriodInMonths);
-    setTotalRepayment(totalRepayment.toFixed(2));
-    setTotalInterest(totalInterest.toFixed(2));
-  };
-
+    setTotalPayments(responseData.totalPayments);
+    setTotalRepayment(responseData.totalRepayment);
+    setTotalInterest(responseData.totalInterest);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+};
   return (
     <div className="loan-details-container">
-      <h1>Loan Details</h1>
+      <h1 className="hade">Loan Details</h1>
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label htmlFor="loanAmount">Loan Amount:</label>
@@ -138,6 +158,7 @@ const LoanDetailsPage = () => {
         </button>
       </form>
       {repaymentAmount !== null && (
+        <div className="repayment-container">
         <div className="repayment-amount">
           <h2>Results:</h2>
           <p>
@@ -147,6 +168,7 @@ const LoanDetailsPage = () => {
             Total of {totalPayments} Payments: ${totalRepayment}
           </p>
           <p>Total Interest: ${totalInterest}</p>
+        </div>
         </div>
       )}
     </div>
