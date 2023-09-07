@@ -2,7 +2,6 @@ import React from "react";
 
 
 const Dashboard = () => {
-  // Dummy data (replace with actual data from your backend)
   const repaymentAmount = "$500";
   const totalPayments = "24";
   const totalLoanAmount = "$10,000";
