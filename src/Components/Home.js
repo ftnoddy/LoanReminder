@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from "./Login";
+import SignUp from "./SignUp";
+import Contact from "./Contact";
+import About from "./About";
+
 
 const Home = () => {
   return (
+    <>
     <div className="home-container">
       <div className="animated-text">
         <h1>Welcome to Loan Reminder App!</h1>
@@ -17,6 +23,8 @@ const Home = () => {
       </div>
     </footer>
     </div>
+    <Login></Login>
+    </>
   );
 };
 
