@@ -23,7 +23,6 @@ const Home = () => {
       </div>
     </footer>
     </div>
-    <Login></Login>
     </>
   );
 };

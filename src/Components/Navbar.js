@@ -19,11 +19,11 @@ const Navbar = ({ onNavigation }) => {
             Sign Up
           </Link>
         </li>
-        <li className="login">
+        {/* <li className="login">
           <Link to="/login" onClick={() => handleNavLinkClick("/login")}>
             Login
           </Link>
-        </li>
+        </li> */}
         <li className="about">
           <Link to="/about" onClick={() => handleNavLinkClick("/about")}>
             About
